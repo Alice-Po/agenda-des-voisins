@@ -58,6 +58,92 @@ const metadata = {
 
   <!-- <Note /> -->
 
+   <!-- Content Widget **************** -->
+
+   <Content
+   isReversed
+   tagline="Inside template"
+   title="AstroWind's Blueprint: Fun Meets Functionality!"
+   items={[
+     {
+       title: '',
+       description:
+         'Les nouveaux arrivants, qui ne connaissent pas encore le territoire',
+     },
+     {
+       title: '',
+       description:
+         'Les habitants qui, après le Covid, ont perdu leurs habitudes',
+     },
+     {
+       title: '',
+       description:
+         'Ceux qui passent trop de temps sur leurs écrans et souhaitent se déconnecter',
+     },
+     {
+       title: '',
+       description:
+         'Les travailleurs qui manquent de temps pour se tenir au courant des événements',
+     },
+   ]}
+   image={{
+     src: '~/assets/images/fold-image.png',
+     alt: 'Colorful Image',
+   }}
+   conclusion="Les bénévoles qui s’impliquent partagent une même envie : renforcer les relations entre voisins, encourager les rencontres entre générations et lutter contre l’isolement."
+ >
+   <Fragment slot="content">
+     <!-- <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3> -->
+     Mais l’Agenda des Voisins n’est pas seulement utile pour les personnes éloignées du numérique. Il aide aussi :
+   </Fragment>
+
+   <!-- <Fragment slot="bg">
+     <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+   </Fragment> -->
+ </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Comment ça marche ?"
+    items={[
+      {
+        title: 'Étape 1 : <span class="font-medium">Collecte des événements</span>',
+        description:
+          "Les citoyens, associations, quartiers et collectivités nous envoient leurs événements grâce à un formulaire.",
+        icon: 'tabler:calendar-search',
+      },
+      {
+        title: 'Étape 2 : <span class="font-medium">Vérification et sélection</span>',
+        description:
+          'Une ou deux personnes vérifient, sélectionnent, et mettent en page les événements sur l’agenda, en respectant une ligne éditoriale. <br/> <br/> <p class="font-bold italic border-2">On privilégie les petits événements locaux, de préférence gratuits et grand public afin que tout le monde se sente bienvenu. On évite les sujets qui fâchent et on veille à la diversité des propositions.</p>  <br/> Ensuite trois autres contributeurs font ensuite la relecture de l’agenda final.',
+        icon: 'tabler:ballpen',
+      },
+      {
+        title: 'Étape 3 : <span class="font-medium">Impression</span>',
+        description:
+          'Nous avons testé plusieurs solutions, et nous imprimons aujourd\'hui chez Familles Rurales Briouze, en utilisant les dons en argent ou en papier des bénéficiaires.',
+        icon: 'tabler:printer',
+      },
+      {
+        title: 'Étape 4 : <span class="font-medium">Pliage et distribution entre distributeurs</span>',
+        description:
+          'Nous nous donnons rdv pour plier les quelques milles agendas. Nous sommes généralement entre 4 et 8 bénévoles. Ensuite, chacun récupère une partie des agendas pour les distribuer aux distributeurs bénévoles qui sont sur leur route.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Étape 5 : <span class="font-medium">La distribution</span>',
+        description:
+       'Enfin, les distributeurs finaux font le tour de leur voisinage pour déposer les agendas dans les boîtes aux lettres de leurs voisins. Nous utilisons une carte pour nous assurer que chaque zone est couverte, sans oublis ni doublons.',
+        icon: 'tabler:send-2',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/table-image.png',
+      alt: 'Steps image',
+    }}
+  />
+
   <!-- Features Widget *************** -->
 
   <Features
@@ -105,44 +191,7 @@ const metadata = {
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 4.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
+ 
   <!-- Content Widget **************** -->
 
   <Content
@@ -218,39 +267,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+ 
 
   <!-- Features2 Widget ************** -->
 
