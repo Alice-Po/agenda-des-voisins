@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: L'Agenda des Voisins
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: L'Agenda des Voisins
+    template: '%s — Agenda des Voisins'
+  description: "Agenda des Voisins website"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: L'Agenda des Voisins
     images:
       - url: '~/assets/images/default.png'
         width: 1200
