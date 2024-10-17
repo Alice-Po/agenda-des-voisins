@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+// import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -43,9 +43,20 @@ const metadata = {
     </Fragment>
   </Hero>
 
+    <!-- Stats Widget ****************** -->
+
+    <Stats
+    stats={[
+      { title: 'Agendas distribués', amount: '1050' },
+      { title: 'Villages touchés', amount: '19' },
+      { title: 'Distributeurs', amount: '26' },
+      { title: 'Relecteurs', amount: '3' },
+    ]}
+  />
+
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <!-- <Note /> -->
 
   <!-- Features Widget *************** -->
 
@@ -356,16 +367,6 @@ const metadata = {
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
 
   <!-- CallToAction Widget *********** -->
 
