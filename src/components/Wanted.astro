@@ -1,0 +1,23 @@
+---
+import type { Content as Props } from "~/types";
+import Image from "~/components/Image.astro";
+import { imageConfig } from "astro:assets";
+
+const { items = [] } = Astro.props;
+---
+
+{
+  items.map(({ title, description, icon, image = {} }) => (
+    <div class="">
+      {console.log(image)}
+      <Image src={image.src} alt={image.alt} />
+      <div class="">
+        <div class="flex justify-center">{icon && { icon }}</div>
+        <div class="mt-0.5">
+          {title && <h3 class="">{title}</h3>}
+          {description && <p class="">{description}</p>}
+        </div>
+      </div>
+    </div>
+  ))
+}

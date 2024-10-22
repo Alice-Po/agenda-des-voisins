@@ -57,11 +57,13 @@ body {
   scroll-behavior: smooth;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 h1 {
   font-size: 1.5rem;
   line-height: 1.2;
+  
 }
 
 h2 {
@@ -313,4 +315,16 @@ input[type="button"]:disabled,
 input[type="reset"]:disabled,
 input[type="submit"]:disabled {
   border-color: var(--grey-mid);
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Décale l'élément vers le bas */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* L'élément revient à sa position originale */
+  }
 }
