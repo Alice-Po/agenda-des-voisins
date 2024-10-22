@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Stats from "../components/Stats.astro";
+import Steps from "../components/Steps.astro";
+import Timeline from "../components/Timeline.astro";
 
 
 import "../styles/global.css";
@@ -21,5 +23,44 @@ import "../styles/global.css";
     { title: 'Relecteurs', amount: '3' },
   ]}
 />
+<Timeline
+    items={[
+      {
+        title: 'Étape 1 : <span class="font-medium">Collecte des événements</span>',
+        description:
+          "Les citoyens, associations, quartiers et collectivités nous envoient leurs événements grâce à un formulaire.",
+        icon: 'tabler:calendar-search',
+      },
+      {
+        title: 'Étape 2 : <span class="font-medium">Vérification et sélection</span>',
+        description:
+          'Une ou deux personnes vérifient, sélectionnent, et mettent en page les événements sur l’agenda, en respectant une ligne éditoriale. <br/> <br/> <p class="font-bold italic border-2">On privilégie les petits événements locaux, de préférence gratuits et grand public afin que tout le monde se sente bienvenu. On évite les sujets qui fâchent et on veille à la diversité des propositions.</p>  <br/> Ensuite trois autres contributeurs font ensuite la relecture de l’agenda final.',
+        icon: 'tabler:ballpen',
+      },
+      {
+        title: 'Étape 3 : <span class="font-medium">Impression</span>',
+        description:
+          'Nous avons testé plusieurs solutions, et nous imprimons aujourd\'hui chez Familles Rurales Briouze, en utilisant les dons en argent ou en papier des bénéficiaires.',
+        icon: 'tabler:printer',
+      },
+      {
+        title: 'Étape 4 : <span class="font-medium">Pliage et distribution entre distributeurs</span>',
+        description:
+          'Nous nous donnons rdv pour plier les quelques milles agendas. Nous sommes généralement entre 4 et 8 bénévoles. Ensuite, chacun récupère une partie des agendas pour les distribuer aux distributeurs bénévoles qui sont sur leur route.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Étape 5 : <span class="font-medium">La distribution</span>',
+        description:
+       'Enfin, les distributeurs finaux font le tour de leur voisinage pour déposer les agendas dans les boîtes aux lettres de leurs voisins. Nous utilisons une carte pour nous assurer que chaque zone est couverte, sans oublis ni doublons.',
+        icon: 'tabler:send-2',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/table-image.png',
+      alt: 'Steps image',
+    }}
+  />
+
 
 </Layout>
