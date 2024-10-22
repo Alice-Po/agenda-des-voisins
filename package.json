@@ -11,6 +11,14 @@
   },
   "dependencies": {
     "astro": "^4.16.6",
+    "astro-icon": "^1.1.1",
     "unpic": "^3.18.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0"
   }
 }
