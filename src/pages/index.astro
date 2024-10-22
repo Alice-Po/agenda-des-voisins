@@ -1,17 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Stats from "../components/Stats.astro";
+
+
 import "../styles/global.css";
 ---
 
 <Layout title="YOUR NAME">
-  <h1>YOUR NAME</h1>
+  <h1>L'Agenda des Voisins</h1>
 
   <p>
-    Lorem ipsum, dolor sit amet <strong>consectetur adipisicing</strong> elit. Minus
-    sunt porro magni, possimus repellendus maxime. Voluptate incidunt laboriosam
-    officia! Cum, ducimus cumque? Repudiandae atque nostrum perspiciatis repellat
-    sit libero. Enim <a href="/now">voluptate</a> aliquam quae sit, cum quibusdam
-    ad <a href="/uses">possimus eaque</a> delectus eos! Laborum inventore corrupti,
-    animi id recusandae delectus est nisi!
+    L’Agenda des Voisins est né dans le bocage ornais pour répondre à un besoin simple : aider ceux qui n’utilisent pas ou peu les outils numériques à connaître les événements locaux. Cet agenda est en format papier et est distribué directement dans les boîtes aux lettres par des bénévoles.
   </p>
+
+  <Stats
+  stats={[
+    { title: 'Agendas distribués', amount: '1050' },
+    { title: 'Villages touchés', amount: '19' },
+    { title: 'Distributeurs', amount: '26' },
+    { title: 'Relecteurs', amount: '3' },
+  ]}
+/>
+
 </Layout>

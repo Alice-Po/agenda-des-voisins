@@ -1,0 +1,29 @@
+---
+import type { Stats as Props } from '~/types';
+
+const {
+  stats = [],
+} = Astro.props;
+---
+
+
+  <div class="">
+    {
+      stats &&
+        stats.map(({ amount, title}) => (
+          <div class="">
+            {amount && (
+              <div class="">
+                {amount}
+              </div>
+            )}
+            {title && (
+              <div class="">
+                {title}
+              </div>
+            )}
+          </div>
+        ))
+    }
+  </div>
+</div>
