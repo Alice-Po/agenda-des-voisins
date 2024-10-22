@@ -1,20 +1,136 @@
-<nav>
-  <p>
-    <a href="/">home</a>
-    <a href="/writings">writings</a>
-    <a href="/projects">projects</a>
-    <a href="/now">now</a>
-    <a href="/uses">uses</a>
-  </p>
+<nav class="navbar">
+  <div class="logo">L'Agenda des Voisins</div>
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
+  <ul class="nav-links">
+    <li><a href="#">Contribuer</a></li>
+    <li><a href="#">À Propos</a></li>
+    <li><a href="#">Projets</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 </nav>
+
 <style>
-  nav > p > a {
-    text-align: left;
-    margin-left: 20px;
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Burger Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  transition: all 0.3s ease;
+  margin: 6px;
+  background-color: black;
+}
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative
+}
+
+.logo {
+  font-size: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  background-color: white;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+/* nav > input {
+  display: none;
+} */
+
+.nav-links a:hover {
+  color: #ff6347;
+}
+
+/* Burger Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    visibility: hidden
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
-  nav {
-    margin-bottom: 4rem;
-    text-align: right;
+  .nav-links li {
   }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  /* Show menu icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Show the nav when checkbox is checked */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Transform burger into a cross when menu is checked */
+  #menu-toggle:checked + .menu-icon .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  #menu-toggle:checked + .menu-icon .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .menu-icon .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+  }
+}
+
 </style>
