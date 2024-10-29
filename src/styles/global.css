@@ -1,7 +1,7 @@
 @font-face {
-  font-family: Inter var;
+  font-family: OpenSans var;
   font-display: swap;
-  src: url("/assets/font/intervar.woff2") format("woff2");
+  src: url("/assets/font/OpenSans-Regular.ttf") format("ttf");
 }
 
 @font-face {
@@ -51,7 +51,7 @@ body {
   font-variation-settings: normal;
   text-rendering: optimizeLegibility;
   font-feature-settings: "calt", "liga";
-  font-family: "Inter var", "Inter", "Helvetica", "Arial", "Liberation Sans",
+  font-family: "OpenSans var", "OpenSans", "Helvetica", "Arial", "Liberation Sans",
     "Noto sans", sans-serif;
 
   scroll-behavior: smooth;
@@ -69,6 +69,8 @@ h1 {
 h1 + p{
   text-align: center;
 }
+
+
 
 h2 {
   font-size: 1.4rem;
