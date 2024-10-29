@@ -97,8 +97,8 @@ a {
 }
 
 a:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
+  /* color: var(--accent);
+  text-decoration-color: var(--accent); */
 }
 
 hr {
@@ -281,17 +281,26 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: none;
+  border: solid 3px;
   outline: none;
-  border-radius: 55px;
-  background: var(--accent);
-  color: var(--white);
+  border-radius: 5px;
+  background: #FFF;
+  color: #000;
   font-family: inherit;
   font-size: inherit;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 6px 20px;
   font-size: 0.9rem;
+  display: block;
+  margin: 3rem auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+button a{
+  text-decoration: none;
+  font-weight: 700;
 }
 
 button:hover,
@@ -299,6 +308,9 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   filter: brightness(1.1);
+  transform: translateY(4px); /* Déplace le bouton vers le bas */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* Réduit l'ombre */
+
 }
 
 button:focus,
@@ -314,6 +326,9 @@ input[type="button"]:disabled,
 input[type="reset"]:disabled,
 input[type="submit"]:disabled {
   border-color: var(--grey-mid);
+}
+section {
+  margin-bottom: 5rem
 }
 
 /* Statistics */
