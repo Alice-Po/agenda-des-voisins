@@ -316,6 +316,42 @@ input[type="submit"]:disabled {
   border-color: var(--grey-mid);
 }
 
+/* Statistics */
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 4rem auto;
+}
+
+@media (max-width: 800px) {
+  .stats {
+    flex-direction: column;
+  }
+}
+
+.stat {
+text-align: center;
+margin : 2rem auto;
+line-height: 1;
+
+}
+
+.stat div:first-child{
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+.stat div:nth-child(even){
+margin: 1rem auto;
+}
+
+/* Agendas*/
+ul.agendas {
+  text-align: center;
+  list-style: none;
+}
 
 @keyframes fadeInUp {
   0% {
