@@ -15,49 +15,14 @@ const { items = [] } = Astro.props;
       </div>
     ))
   }
-
-{/* 
-    <div class="tab">
-      <input type="checkbox" name="accordion-1" id="cb1" checked>
-      <label for="cb1" class="tab__label">Checkbox</label>
-      <div class="tab__content">
-        <p>Pure CSS accordion based on the "input:checked + label" style trick.</p>
-      </div>
-    </div>
-    <div class="tab">
-      <input type="checkbox" name="accordion-1" id="cb2">
-      <label for="cb2" class="tab__label">Open multiple</label>
-      <div class="tab__content">
-        <p>Using <code>&lt;input type="checkbox"&gt;</code> allows to have several tabs open at the same time.</p>
-      </div>
-    </div> */}
   </section>
   
   
 
   <style>
-    :root {
-  --primary: #227093;
-  --secondary: #ff5252;
-  --background: #eee;
-  --highlight: #ffda79;
-  /* Theme color */
-  --theme: var(--primary);
-}
+
 *, *::before, *::after {
   box-sizing: border-box;
-}
-body {
-  display: grid;
-  place-content: center;
-  grid-template-columns: repeat(auto-fit, min(100%, 30rem));
-  min-height: 100vh;
-  place-items: start;
-  gap: 1rem;
-  margin: 0;
-  padding: 1rem;
-  color: var(--primary);
-  background: var(--background);
 }
 
 /* Core styles/functionality */
@@ -80,7 +45,7 @@ body {
 
 /* Visual styles */
 .accordion {
-  color: var(--theme);
+  color: #000;
   border: 2px solid;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -88,7 +53,7 @@ body {
 .tab__label,
 .tab__close {
   display: flex;
-  color: white;
+  color: #000;
   background: var(--theme);
   cursor: pointer;
 }
@@ -116,14 +81,9 @@ body {
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
 }
-.accordion--radio {
-  --theme: var(--secondary);
-}
 
 /* Arrow animation */
-.tab input:not(:checked) + .tab__label:hover::after {
-  animation: bounce .5s infinite;
-}
+
 @keyframes bounce {
   25% {
     transform: rotate(90deg) translate(.25rem);
