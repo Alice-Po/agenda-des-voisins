@@ -1,20 +1,21 @@
-<div align="center">
-    <h1>Minimal Memoir</h1>
-</div>
+ <h1>Agenda des Voisins</h1>
 
 ## Get Started
 
 1. Clone the repository.
 
    ```console
-   git clone https://github.com/sudanchapagain/minimal-memoir.git
-   cd minimal-memoir
+   git clone https://github.com/Alice-Po/agenda-des-voisins
+   cd agenda-des-voisins
+
    ```
 
 2. Install Dependencies by running `npm install` in your terminal.
-3. Customize your site by replacing default values like name, description, images and accent colors.
-4. Deploy.
+3. Run in locally with `npm run dev` in your terminal.
 
-<h2>Preview</h2>
+## Contributing
+Ask Alice to be introduice or write a message to contact[at]agendadesvoisins.fr
 
-<img src="https://i.postimg.cc/13PsxkX9/site.png">
+<small>
+    <a href="https://github.com/sudanchapagain/minimal-memoir.git">Thème librement inspiré de Minimal Memoir</a>
+</small>
