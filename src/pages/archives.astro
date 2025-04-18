@@ -1,0 +1,180 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+
+import "../styles/global.css";
+
+interface Agenda {
+  date: string;
+  path: string;
+  filename: string;
+}
+
+const agendas: Agenda[] = [
+  {
+    date: "Avril 2025",
+    path: "assets/agendas/2025-04-agenda-des-voisins.pdf",
+    filename: "2025-04-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Mars 2025",
+    path: "assets/agendas/2025-03-agenda-des-voisins.pdf",
+    filename: "2025-03-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Février 2025",
+    path: "assets/agendas/2025-02-agenda-des-voisins.pdf",
+    filename: "2025-02-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Janvier 2025",
+    path: "assets/agendas/2025-01-agenda-des-voisins.pdf",
+    filename: "2025-01-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Décembre 2024",
+    path: "assets/agendas/2024-12-agenda-des-voisins.pdf",
+    filename: "2024-12-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Novembre 2024",
+    path: "assets/agendas/2024-11-agenda-des-voisins.pdf",
+    filename: "2024-11-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Octobre 2024",
+    path: "assets/agendas/2024-10-agenda-des-voisins.pdf",
+    filename: "2024-10-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Septembre 2024",
+    path: "assets/agendas/2024-09-agenda-des-voisins.pdf",
+    filename: "2024-09-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Août 2024",
+    path: "assets/agendas/2024-08-agenda-des-voisins.pdf",
+    filename: "2024-08-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Juillet 2024",
+    path: "assets/agendas/2024-07-agenda-des-voisins.pdf",
+    filename: "2024-07-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Juin 2024",
+    path: "assets/agendas/2024-06-agenda-des-voisins.pdf",
+    filename: "2024-06-agenda-des-voisins.pdf"
+  },
+  {
+    date: "Mai 2024",
+    path: "assets/agendas/2024-05-agenda-des-voisins.pdf",
+    filename: "2024-05-agenda-des-voisins.pdf"
+  }
+];
+---
+
+<Layout title="Archives - Agenda des Voisins">
+  <Navbar />
+  <h1>Archives de l'Agenda des Voisins</h1>
+
+  <section class="archives-section">
+    <p class="intro">
+      Retrouvez ici tous les anciens numéros de l'Agenda des Voisins. Vous pouvez les consulter en ligne ou les télécharger au format PDF.
+    </p>
+
+    <div class="archives-list">
+      {agendas.map((agenda) => (
+        <article class="agenda-item">
+          <h2>Agenda de {agenda.date}</h2>
+          <div class="actions">
+            <a href={agenda.path} target="_blank" class="btn-link">
+              <span class="icon">👁️</span> Consulter
+            </a>
+            <span class="separator">•</span>
+            <a href={agenda.path} download={agenda.filename} class="btn-link">
+              <span class="icon">📥</span> Télécharger
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .archives-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .intro {
+    color: var(--grey-dark);
+    text-align: center;
+    margin: 2rem 0 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .archives-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .agenda-item {
+    border-bottom: 1px solid var(--white-dark);
+    padding-bottom: 2rem;
+  }
+
+  .agenda-item:last-child {
+    border-bottom: none;
+  }
+
+  .agenda-item h2 {
+    font-size: 1.5rem;
+    color: var(--black-light);
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-link {
+    color: var(--black-light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+
+  .btn-link:hover {
+    color: var(--accent);
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+
+  .separator {
+    color: var(--grey-mid);
+  }
+
+  @media (max-width: 640px) {
+    .intro {
+      text-align: left;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .agenda-item h2 {
+      font-size: 1.3rem;
+    }
+  }
+</style> 
