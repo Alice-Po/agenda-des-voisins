@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+
+import "../styles/global.css";
+---
+
+<Layout title="Contribuer - Agenda des Voisins">
+  <Navbar />
+  <section>
+    <h2>Contribuez à l'Agenda des Voisins !</h2>
+    <p>
+          Tout le monde peut contribuer à l'agenda des voisins en y ajoutant un
+          évenement. Nous privilégions les petits événements locaux, de préférence
+          gratuits et grand public afin que tout le monde se sente bienvenu. On
+          évite les sujets qui fâchent et on veille à la diversité des propositions.
+        </p>
+        <button class="" type="button"
+          ><a
+            href="https://openagenda.com/agenda-des-voisins/contribute/event"
+            target="_blank">🠖 Ajouter un évenement à l'agenda 🠔</a
+          ></button
+        >
+        <p>
+          Si vous avez peur de faire un doublon, <a
+            href="https://openagenda.com/agenda-des-voisins/"
+            >regardez avant si votre évenement n'a pas déjà été référencé !</a>
+        </p>
+      </section>
+      <section>
+        <h2>Il y a de nombreuses façons de contribuer !</h2>
+        <p>
+          Chacun apporte ce qu'il peut, quand il peut ! Que vous ayez 30 minutes ou quelques heures par mois à offrir, il y a probablement une façon de participer qui vous conviendra.
+        </p>
+
+        <p>
+          Vous pouvez par exemple :
+        </p>
+
+        <ul>
+          <li>Devenir distributeur et apporter l'agenda à vos voisins (environ 30 boîtes aux lettres)</li>
+          <li>Nous aider à plier les agendas lors de nos sessions mensuelles</li>
+          <li>Participer à la relecture pour traquer les petites erreurs (se fait sur une plateforme web)</li>
+          <li>Aider à la mise en page si vous êtes à l'aise avec les outils de publipostage</li>
+          <li>Contribuer à la communication pour faire connaître l'agenda</li>
+          <li>Rejoindre l'équipe qui réfléchit à la collecte de dons une fois par an en mars</li>
+        </ul>
+
+        <p>
+Notre équipe fonctionne en relais : chacun participe quand il peut, comme il peut. Pas besoin d'être un pro de l'informatique ou d'avoir des compétences particulières - l'envie de créer du lien dans nos villages suffit !
+        </p>
+      </section>
+      <section>
+        <h2>
+          Vous souhaitez nous rejoindre ou avez des questions ? Écrivez-nous un petit message !
+        </h2>
+          <form
+            action="https://formspree.io/f/mpwpgjgr"
+            method="POST"
+            class="contact-form"
+          >
+            <div class="form-group">
+              <label for="email">
+                Votre email :
+                <input type="email" id="email" name="email" required placeholder="exemple@mail.com">
+              </label>
+            </div>
+            
+            <div class="form-group">
+              <label for="contribution">
+                Comment souhaitez-vous participer ? (facultatif)
+                <select name="contribution" id="contribution">
+                  <option value="">Choisissez une option</option>
+                  <option value="distribution">Distribution des agendas</option>
+                  <option value="pliage">Aide au pliage</option>
+                  <option value="relecture">Relecture</option>
+                  <option value="mise-en-page">Mise en page</option>
+                  <option value="communication">Communication</option>
+                  <option value="dons">Gestion des dons</option>
+                  <option value="autre">Autre / Je ne sais pas encore</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                Votre message :
+                <textarea 
+                  name="message" 
+                  id="message" 
+                  required 
+                  placeholder="Dites-nous en quelques mots ce qui vous intéresse dans l'Agenda des Voisins..."
+                ></textarea>
+              </label>
+            </div>
+
+            <button type="submit">Envoyer le message</button>
+          </form>
+        </div>
+      </section>
+
+</Layout> 

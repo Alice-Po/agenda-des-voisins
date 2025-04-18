@@ -6,20 +6,18 @@ import Timeline from "../components/Timeline.astro";
 import Wanted from "../components/Wanted.astro";
 import Accordion from "../components/Accordion.astro";
 import OpenAgendaIntegration from "../components/OpenAgendaIntegration.astro";
+import Navbar from "../components/Navbar.astro";
 
 import "../styles/global.css";
 ---
 
 <Layout title="Agenda des Voisins">
+  <Navbar />
   <section>
     <h1>L'Agenda des Voisins</h1>
 
     <p>
-      L’Agenda des Voisins est né dans le bocage ornais pour répondre à un
-      besoin simple : aider ceux qui n’utilisent pas ou peu les outils
-      numériques à connaître les événements locaux. Cet agenda est en format
-      papier et est distribué directement dans les boîtes aux lettres par des
-      bénévoles.
+      L'Agenda des Voisin est un agenda de voisinage participatif qui rend visible les événements locaux afin de favoriser les rencontres, créer du lien et permet à chacun de découvrir et participer à la vie locale quel que soit son degré de connexion au monde numérique
     </p>
 
     <Image
@@ -34,30 +32,9 @@ import "../styles/global.css";
       stats={[
         { title: "Agendas distribués", amount: "1200" },
         { title: "Villages touchés", amount: "19" },
-        { title: "Distributeurs", amount: "30" },
-        { title: "Relecteurs", amount: "3" },
+        { title: "Contributeurs", amount: "33" },
       ]}
     />
-  </section>
-  <section>
-    <h2>Contribuez à l'Agenda des Voisins !</h2>
-    <p>
-      Tout le monde peut contribuer à l'agenda des voisins en y ajoutant un
-      évenement. Nous privilégions les petits événements locaux, de préférence
-      gratuits et grand public afin que tout le monde se sente bienvenu. On
-      évite les sujets qui fâchent et on veille à la diversité des propositions.
-    </p>
-    <button class="" type="button"
-      ><a
-        href="https://openagenda.com/agenda-des-voisins/contribute/event"
-        target="_blank">🠖 Ajouter un évenement à l'agenda 🠔</a
-      ></button
-    >
-    <p>
-      Si vous avez peur de faire un doublon, <a
-        href="https://openagenda.com/agenda-des-voisins/"
-        >regardez avant si votre évenement n'a pas déjà été référencé !</a>
-    </p>
   </section>
   <section>
     <h2>Abonnez-vous à l'Agenda des Voisins par email</h2>
@@ -88,7 +65,7 @@ import "../styles/global.css";
           title:
             'Étape 2 : <span class="font-medium">Vérification et sélection</span>',
           description:
-            'Une ou deux personnes vérifient, sélectionnent, et mettent en page les événements sur l’agenda, en respectant une ligne éditoriale. <br/> <br/> <p class="font-bold italic border-2">On privilégie les petits événements locaux, de préférence gratuits et grand public afin que tout le monde se sente bienvenu. On évite les sujets qui fâchent et on veille à la diversité des propositions.</p>  <br/> Ensuite trois autres contributeurs font ensuite la relecture de l’agenda final.',
+            'Une ou deux personnes vérifient, sélectionnent, et mettent en page les événements sur l'agenda, en respectant une ligne éditoriale. <br/> <br/> <p class="font-bold italic border-2">On privilégie les petits événements locaux, de préférence gratuits et grand public afin que tout le monde se sente bienvenu. On évite les sujets qui fâchent et on veille à la diversité des propositions.</p>  <br/> Ensuite trois autres contributeurs font ensuite la relecture de l'agenda final.',
           icon: "tabler:ballpen",
         },
         {
@@ -140,7 +117,7 @@ import "../styles/global.css";
         },
         {
           title:
-            "Vous avez un espace pour accueillir une session de pliage d’agendas ?",
+            "Vous avez un espace pour accueillir une session de pliage d'agendas ?",
           description:
             "Chaque mois, nous nous retrouvons pour plier des agendas, discuter, et passer un bon moment ensemble. Actuellement, ces rencontres se font souvent chez Alice et Guillaume à la Forêt-Auvray, mais nous aimerions varier les lieux. Si vous avez un espace et que vous êtes partant(e) pour accueillir une session, faites-le nous savoir par mail. En général, nous sommes entre 4 et 8 personnes, et c'est l'occasion de partager un moment convivial tout en aidant le projet.",
           icon: "tabler:home",
@@ -157,7 +134,7 @@ import "../styles/global.css";
     <Accordion
       items={[
         {
-          title: "Quel est le budget de l’Agenda des Voisins ?",
+          title: "Quel est le budget de l'Agenda des Voisins ?",
           description:
             "L'agenda a un petit budget : 4 ramettes de papier (4 x 5€) et 3000 impressions (3000 x 0,02€), soit environ 80€ par mois. Les bénéficiaires (associations, collectivités, voisins) donnent régulièrement de l'argent ou du papier.",
           number: 1,
@@ -171,13 +148,13 @@ import "../styles/global.css";
         {
           title: "Comment sont prises les décisions ?",
           description:
-            "Les décisions sont prises de manière inclusive et lente pour que chacun puisse s’adapter. Nous testons chaque nouveauté avant de l’adopter, afin d’assurer que tout fonctionne bien.",
+            "Les décisions sont prises de manière inclusive et lente pour que chacun puisse s'adapter. Nous testons chaque nouveauté avant de l'adopter, afin d'assurer que tout fonctionne bien.",
           number: 3,
         },
         {
-          title: "Quel est le statut juridique de l’Agenda des Voisins ?",
+          title: "Quel est le statut juridique de l'Agenda des Voisins ?",
           description:
-            "L’Agenda est pour l’instant soutenu par Familles Rurales Briouze, qui partage nos valeurs de lien social. À terme, nous envisageons de devenir une association.",
+            "L'Agenda est pour l'instant soutenu par Familles Rurales Briouze, qui partage nos valeurs de lien social. À terme, nous envisageons de devenir une association.",
           number: 4,
         },
       ]}

@@ -1,18 +1,18 @@
 @font-face {
   font-family: OpenSans var;
   font-display: swap;
-  src: url("/assets/font/OpenSans-Regular.ttf") format("ttf");
+  src: url('/assets/font/OpenSans-Regular.ttf') format('ttf');
 }
 
 @font-face {
   font-family: Jetbrains Mono;
   font-display: swap;
-  src: url("/assets/font/jetbrainsmono-regular.woff2") format("woff2");
+  src: url('/assets/font/jetbrainsmono-regular.woff2') format('woff2');
 }
 
 :root {
-  --accent: #8926ed;
-  --accent-faint: #8926ed55;
+  --accent: #ede026;
+  --accent-faint: #ede026;
 
   --white: #ffffff;
   --white-light: #fafafa;
@@ -30,8 +30,8 @@
 }
 
 *::selection {
-  background-color: #8926ed50;
-  color: purple;
+  background-color: #fffa02;
+  color: black;
 }
 
 body {
@@ -50,9 +50,9 @@ body {
   letter-spacing: normal;
   font-variation-settings: normal;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "calt", "liga";
-  font-family: "OpenSans var", "OpenSans", "Helvetica", "Arial", "Liberation Sans",
-    "Noto sans", sans-serif;
+  font-feature-settings: 'calt', 'liga';
+  font-family: 'OpenSans var', 'OpenSans', 'Helvetica', 'Arial', 'Liberation Sans', 'Noto sans',
+    sans-serif;
 
   scroll-behavior: smooth;
   word-wrap: break-word;
@@ -66,11 +66,9 @@ h1 {
   text-align: center;
 }
 
-h1 + p{
+h1 + p {
   text-align: center;
 }
-
-
 
 h2 {
   font-size: 1.4rem;
@@ -132,7 +130,7 @@ blockquote {
 
 code {
   font-size: 0.9rem;
-  font-family: "Jetbrains Mono", monospace;
+  font-family: 'Jetbrains Mono', monospace;
 }
 
 pre {
@@ -141,11 +139,11 @@ pre {
   padding: 20px;
   border-radius: 5px;
   overflow: auto;
-  font-family: "Jetbrains Mono", monospace;
+  font-family: 'Jetbrains Mono', monospace;
 }
 
 kbd {
-  font-family: "Jetbrains Mono", monospace;
+  font-family: 'Jetbrains Mono', monospace;
   font-size: 0.8rem;
 }
 
@@ -161,8 +159,15 @@ audio {
 }
 
 img.logo {
-  margin : 4rem auto;
+  margin: 4rem auto;
   display: block;
+}
+img.logo-small {
+  margin: auto;
+  display: block;
+}
+.navbar {
+  background-color: var(--white-light) !important;
 }
 
 video {
@@ -181,17 +186,17 @@ fieldset {
 }
 
 button,
-input[type="button"],
-input[type="checkbox"],
-input[type="radio"],
-input[type="range"],
-input[type="reset"],
-input[type="submit"],
+input[type='button'],
+input[type='checkbox'],
+input[type='radio'],
+input[type='range'],
+input[type='reset'],
+input[type='submit'],
 select {
   cursor: pointer;
 }
 
-input:not([type="checkbox"]):not([type="radio"]),
+input:not([type='checkbox']):not([type='radio']),
 select {
   display: block;
 }
@@ -210,13 +215,13 @@ textarea {
   background-color: var(--white);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   height: 1.2em;
   width: 1em;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   border-radius: 100%;
 }
 
@@ -269,24 +274,24 @@ legend {
   font-weight: 600;
 }
 
-input[type="range"] {
+input[type='range'] {
   margin: 10px 0;
   padding: 10px 0;
   background: transparent;
 }
 
-input[type="range"]:focus {
+input[type='range']:focus {
   outline: none;
 }
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   border: solid 3px;
   outline: none;
   border-radius: 5px;
-  background: #FFF;
+  background: #fff;
   color: #000;
   font-family: inherit;
   font-size: inherit;
@@ -300,37 +305,36 @@ input[type="submit"] {
   transition: all 0.2s ease;
 }
 
-button a{
+button a {
   text-decoration: none;
   font-weight: 700;
 }
 
 button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover {
   filter: brightness(1.1);
   transform: translateY(4px); /* Déplace le bouton vers le bas */
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* Réduit l'ombre */
-
 }
 
 button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {
+input[type='button']:focus,
+input[type='reset']:focus,
+input[type='submit']:focus {
   border: 1px solid var(--accent);
   box-shadow: none;
 }
 
 button:disabled,
-input[type="button"]:disabled,
-input[type="reset"]:disabled,
-input[type="submit"]:disabled {
+input[type='button']:disabled,
+input[type='reset']:disabled,
+input[type='submit']:disabled {
   border-color: var(--grey-mid);
 }
 section {
-  margin-bottom: 5rem
+  margin-bottom: 5rem;
 }
 
 /* Statistics */
@@ -349,19 +353,18 @@ section {
 }
 
 .stat {
-text-align: center;
-margin : 2rem auto;
-line-height: 1;
-
+  text-align: center;
+  margin: 2rem auto;
+  line-height: 1;
 }
 
-.stat div:first-child{
+.stat div:first-child {
   font-size: 2.75rem;
   font-weight: 700;
 }
 
-.stat div:nth-child(even){
-margin: 1rem auto;
+.stat div:nth-child(even) {
+  margin: 1rem auto;
 }
 
 /* Agendas*/
@@ -378,5 +381,91 @@ ul.agendas {
   100% {
     opacity: 1;
     transform: translateY(0); /* L'élément revient à sa position originale */
+  }
+}
+
+/* Styles du formulaire de contact */
+.contact-form-container {
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background-color: var(--white-light);
+  border-radius: 12px;
+  max-width: 40rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form-container p {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--black-light);
+  font-size: 1.1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--black-light);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--white-mid);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background-color: var(--white);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: var(--white-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-faint);
+}
+
+.form-group textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.contact-form button[type='submit'] {
+  margin: 2rem auto 0.5rem auto;
+  padding: 0.8rem 2.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 1.5rem;
+    margin: 2rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .contact-form button[type='submit'] {
+    width: 100%;
+    margin: 1.5rem 0 0 0;
   }
 }
