@@ -469,3 +469,49 @@ ul.agendas {
     margin: 1.5rem 0 0 0;
   }
 }
+
+/* Cards */
+.cost-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
+}
+
+.cost-card h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cost-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.cost-card li {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+}
+
+.cost-highlight {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem 0;
+  padding-top: 1rem;
+  border-top: 2px solid var(--white-mid);
+}
+
+.cost-detail {
+  text-align: center;
+  color: var(--grey-mid);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .cost-card {
+    padding: 1.5rem;
+  }
+}
