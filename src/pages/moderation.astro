@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+
+import "../styles/global.css";
+---
+
+<Layout title="Modération - Agenda des Voisins">
+  <Navbar />
+  <h1>Charte éditoriale et de modération</h1>
+  <p class="update-date">Dernière mise à jour : 10/05/2025</p>
+
+  <section>
+    <p class="intro">
+      L'Agenda des Voisins est un mensuel gratuit distribué dans vos boîtes aux lettres par des bénévoles. Nous voulons que chaque personne, quel que soit son âge ou son niveau d'études, puisse comprendre et profiter de notre contenu.
+    </p>
+  </section>
+
+  <section>
+    <h2>Les contenus désirés</h2>
+    <p>Nous estimons être un contenu de qualité :</p>
+    <ul class="moderation-list">
+      <li>Une grande diversité dans les propositions et les annonceurs</li>
+      <li>Les événements doivent favoriser le lien social et la mixité</li>
+      <li>Les activités commerciales sont acceptées si leurs prix sont accessibles et justifiés</li>
+      <li>Nous privilégions les petits événements locaux avec peu de moyens</li>
+      <li>Le périmètre géographique est entre Briouze, Flers et Argentan</li>
+    </ul>
+
+    <div class="exclusion-box">
+      <h3>Contenus exclus</h3>
+      <ul>
+        <li>Les pratiques de soin non-conventionnel sont exclues de l'agenda</li>
+        <li>Les événements de politique locale ne sont également pas les bienvenus</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Comment nous choisissons le contenu</h2>
+    <ol class="process-list">
+      <li>Des relecteurs vérifient si les événements respectent nos règles avant la mise en page.</li>
+      <li>Si l'agenda dépasse 4 pages, certains événements peuvent être retirés même s'ils respectent nos règles.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Si vous pensez qu'un événement ne respecte pas nos règles</h2>
+    
+    <div class="moderation-steps">
+      <div class="step">
+        <h3>Signalement</h3>
+        <p>Un événement peut être retiré après 3 signalements justifiés qui se réfèrent à nos critères.</p>
+      </div>
+      
+      <div class="step">
+        <h3>Recours</h3>
+        <p>L'organisateur peut demander pourquoi son événement a été signalé et peut demander l'avis d'un comité.</p>
+      </div>
+      
+      <div class="step">
+        <h3>Comité de médiation</h3>
+        <p>3 contributeurs de l'agenda tirés au sort examinent le problème et décident si l'événement reste ou non.</p>
+      </div>
+    </div>
+    
+    <p class="note">
+      Cette charte s'applique aux versions papier et en ligne de l'agenda. Les décisions de retrait s'appliquent aux deux formats.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .update-date {
+    text-align: center;
+    color: var(--grey-mid);
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .moderation-list li, 
+  .process-list li {
+    margin-bottom: 0.8rem;
+  }
+
+  .exclusion-box {
+    background-color: var(--white);
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .exclusion-box h3 {
+    margin-top: 0;
+    color: var(--black-light);
+  }
+
+  .moderation-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .step {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .step h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: var(--black-light);
+  }
+
+  .step p {
+    margin: 0;
+  }
+
+  .note {
+    background-color: var(--white-light);
+    padding: 1rem;
+    border-radius: 6px;
+    font-style: italic;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .moderation-steps {
+      gap: 1rem;
+    }
+
+    .step {
+      padding: 1.2rem;
+    }
+  }
+</style>
